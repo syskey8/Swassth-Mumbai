@@ -1,0 +1,74 @@
+{
+  "intents": [
+    {
+      "name": "Cuts",
+      "auto": true,
+      "contexts": [],
+      "responses": [
+        {
+          "resetContexts": false,
+          "messages": [
+            {
+              "type": 0,
+              "lang": "en",
+              "speech": [
+                "Wash the cut properly to prevent infection and stop the bleeding by applying pressure for 1-2minutes until bleeding stops. Apply Petroleum Jelly to make sure that the wound is moist for quick healing. Finally cover the cut with a sterile bandage. Pain relievers such as acetaminophen can be applied."
+              ]
+            }
+          ]
+        }
+      ],
+      "priority": 500000,
+      "webhookUsed": false,
+      "fallbackIntent": false,
+      "events": [],
+      "userSays": [
+        {
+          "data": [
+            {
+              "text": "What to do if Cuts?"
+            }
+          ],
+          "isTemplate": false,
+          "count": 0
+        },
+        {
+          "data": [
+            {
+              "text": "How to cure Cuts?"
+            }
+          ],
+          "isTemplate": false,
+          "count": 0
+        },
+        {
+          "data": [
+            {
+              "text": "Which medicine to apply for Cuts?"
+            }
+          ],
+          "isTemplate": false,
+          "count": 0
+        },
+        {
+          "data": [
+            {
+              "text": "what to apply on cuts?"
+            }
+          ],
+          "isTemplate": false,
+          "count": 0
+        },
+        {
+          "data": [
+            {
+              "text": "Cuts"
+            }
+          ],
+          "isTemplate": false,
+          "count": 0
+        }
+      ]
+    }
+  ]
+}
