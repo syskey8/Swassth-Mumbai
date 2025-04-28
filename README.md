@@ -1,72 +1,113 @@
+# Swasth Mumbai
 
-# SWASTH Mumbai Beacon - ML Project
+Swasth Mumbai is a comprehensive health and safety web application for Mumbai residents and visitors. It provides real-time health alerts, a dashboard for weather and air quality, a map of hospitals and pharmacies, emergency contacts, and a health toolkit with first aid, disease symptoms, and prevention tips. The app is built with React, Vite, TailwindCSS, and integrates various APIs for a complete experience.
 
-A Machine Learning project focused on predicting outcomes related to SWASTH Mumbai Beacon initiative, built with Python.
+## Features
 
-## 📂 Project Structure
+- **Dashboard:**
+  - Real-time weather and air quality updates for your location.
+  - Health alerts for outbreaks, high AQI, and more.
+
+- **Health Map:**
+  - Interactive map showing major hospitals and pharmacies in Mumbai (static and live from Google Places).
+  - Outbreak locations and health-related incidents.
+  - Custom markers for hospitals and pharmacies.
+
+- **Emergency Contacts:**
+  - One-tap calling for all major Mumbai and national emergency numbers (police, fire, ambulance, disaster, women/child helplines, etc.).
+
+- **Health Toolkit:**
+  - First aid instructions with images for common emergencies.
+  - Disease symptoms guide and prevention tips.
+  - Official health resources.
+
+- **Localization:**
+  - Supports English, Hindi, and Marathi.
+  - Language selector integrated into the UI.
+
+- **Accessibility:**
+  - High-contrast UI, large touch targets, and readable fonts.
+
+## Project Structure
+
+- `public/` — Static files like index.html
+- `src/`
+  - `api/` — API utilities
+  - `components/` — Reusable UI components
+  - `contexts/` — React Context providers
+  - `hooks/` — Custom React hooks
+  - `lib/` — Utility libraries and helpers
+  - `pages/` — Main app pages (Dashboard, Map, Toolkit, etc.)
+- `supabase/` — Database and authentication configuration
+- `index.html` — App root HTML file
+- `vite-env.d.ts` — TypeScript Vite environment declarations
+- `tailwind.config.ts` — Tailwind CSS configuration
+- `tsconfig.json` — TypeScript configuration
+
+## Dependencies
+
+The following major dependencies are required to run this app:
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Supabase](https://supabase.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [React-i18next](https://react.i18next.com/) (for localization)
+- [Google Maps Platform](https://cloud.google.com/maps-platform/)
+- [Axios](https://axios-http.com/)
+
+### Install all dependencies:
+
+```bash
+npm install
+# or
+yarn install
 
 ```
-├── app.py                # Entry point for the app
-├── config.yaml           # Configuration file for paths and parameters
-├── requirements.txt      # Python dependencies
-├── README.md             # Project documentation
-├── LICENSE               # License information
-├── models/
-│   └── beacon_model.pkl  # Trained ML model
-├── notebooks/
-│   └── beacon_model_training.ipynb  # Model training and experiments
-└── src/
-    ├── __init__.py
-    ├── data_ingestion.py         # Data loading utilities
-    ├── data_preprocessing.py     # Data cleaning and preprocessing
-    └── prediction_service.py     # Functions for making predictions
+
+### If you need to install specific packages manually:
+
+```bash
+npm install react react-dom vite tailwindcss react-router-dom react-i18next axios
+
 ```
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/swasth-mumbai-beacon.git
-   cd swasth-mumbai-beacon
-   ```
+Clone the repository:
 
-2. **Create a virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scriptsctivate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the application**
-   ```bash
-   python app.py
-   ```
-
-## ⚙️ Configuration
-
-Edit the `config.yaml` file to adjust file paths and model parameters as needed.
-
-Example structure:
-
-```yaml
-model_dir: models
-model_file: beacon_model.pkl
+```bash
+git clone <repo-url>
+cd <project-directory>
 ```
 
-## 🛠️ Key Modules
+Install dependencies:
 
-- **`data_ingestion.py`** - Handles loading of datasets.
-- **`data_preprocessing.py`** - Applies preprocessing steps like cleaning, transformation.
-- **`prediction_service.py`** - Loads the model and makes predictions.
+```bash
+npm install
+# or
+yarn install
+```
 
-## 📈 Model Training
+Set up environment variables:
 
-The model was trained using the Jupyter notebook available in `notebooks/beacon_model_training.ipynb`.
+Create a .env file and add the following:
 
-## 📄 License
+```env
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-This project is licensed under the terms of the **MIT License**.
+Run the app:
+
+```bash
+npm run dev
+```
+
+
+## License
+This project is intended for educational and non-commercial use.
+For questions or contributions, feel free to open an issue or a pull request.
+
